@@ -14,12 +14,11 @@ function App() {
   const [filteredTodos, setFilteredTodos] = useState([]);
 
   useEffect(() => {
-    getLocalTodos();
+    
   }, []);
 
   useEffect(() => {
     filterHandler();
-    saveLocalTodos();
   }, [todos, status]);
 
   const filterHandler = () =>{
