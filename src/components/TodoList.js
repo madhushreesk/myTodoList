@@ -12,7 +12,7 @@ const TodoList = ({todos, setTodos, filteredTodos}) => {
                 todos = {todos}
                 key = {todo.id}
                 todo = {todo} 
-                text = {todo.text}/>
+                text = {todo.Problem}/>
             ))}
              </ul>
         </div>

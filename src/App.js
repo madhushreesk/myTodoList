@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import './App.css';
 import Form from "./components/Form";
 import TodoList from "./components/TodoList";
-
+import * as data from "./components/dsa.json";
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
   const [inputText, setinputText] = useState("");
   const [todos, setTodos] = useState([]);
   const [status, setStatus] = useState('all');
-  const [filteredTodos, setFilteredTodos] = useState([]);
+  const [filteredTodos, setFilteredTodos] = useState(data.Sheet1);
 
   useEffect(() => {
     
@@ -24,15 +24,15 @@ function App() {
   const filterHandler = () =>{
     switch(status){
       case 'completed': 
-      setFilteredTodos(todos.filter(todo => todo.completed === true))
+      //setFilteredTodos(todos.filter(todo => todo.completed === true))
       break;
 
       case 'Not-completed':
-        setFilteredTodos(todos.filter(todo => todo.completed === false))
+       // setFilteredTodos(todos.filter(todo => todo.completed === false))
         break;
 
       default:
-        setFilteredTodos(todos);
+        //setFilteredTodos(todos);
         break;
     }
   }
@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1>My TODO list </h1>
+        <h1> DSA Cracker Sheet </h1>
       </header>
       <div >
         <Form 
